@@ -1,0 +1,21 @@
+$margin: 2%;
+$padding: 1%;
+
+@function width-calc() {
+    @return ((100% - $padding) / 2) - (3 * $margin);
+}
+
+.sass-feature {
+    margin: $margin;
+    padding: $padding;
+    width: width-calc();
+    float: left;
+    background-color: #aaa;
+}
+
+@media (max-width: 800px) {
+    .sass-feature{
+        width: 100%;
+        margin: 5px auto;
+    } 
+}
